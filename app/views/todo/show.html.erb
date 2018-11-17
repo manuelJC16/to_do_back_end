@@ -1,8 +1,9 @@
 <input type= "checkbox">
-     <h2> <%= @todo_description %> pomodoro estaminte: <%=@todo_pomodoro_estimate%>
 </h2>
     <a href="#">Edit</a>
     <a href="#">Detele</a>
     <a href="/todo/index.html">Go back.</a>
    <h3>Todo #<%= params[:id] %></h3>
 
+<%=@todo.description %>
+<%=@todo.pomodoro_estimate %>
