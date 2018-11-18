@@ -1,15 +1,14 @@
 <h1>Hello world!</h1>
  <ul> do list 
-        <li><input type="checkbox"><a href="show/1">go to code now</a>
-        <span> 1 pomoduro</span></li> 
-        <li><input type="checkbox"><a href="show/2">don't forget your laptop</a><span class="pomo-est"> 1 pomoduro</span></li> 
-        <li><input type="checkbox"><a href="show/3">bring the given homework</a><span class="pomo-est"> 1 pomoduro</span></li>
-        <li><input type="checkbox"><a href="show/4">bring a pen</a><span class="pomo-est">  1 pomoduro</span> </li>
-        <li><input type="checkbox"><a href="show/5">think of how great the instructor is</a><span class="pomo-est">  1 pomoduro</span></li>
-        <li><input type="checkbox"><a href="show/6">leave the building</a><span class="pomo-est">  1 pomoduro</span></li> </ul>
-        <input type="text">
-        <input type="number">
-        <input type="text" placeholder="add todo">
-        <input id="add-new-todo" type="sumbit" value="enter todo">
-        <%=2+2%>
-       
+        <%@todos.each do |todo|%>
+        <li> <input type="checkbox" name=""/>
+        <a href="show/<%= todo.id %>"><%= todo.description %></a>
+        <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
+        </li>
+        <%end%>
+       <form action="/todo/create">
+       <input class="text-input" id="new-todo-description" name="description" type="text" placeholder="Add a new todo...">
+       <input class="text-input" id="new-pomodoro-estimate" name="pomodoro_estimate" type="number" placeholder="Pomodoro estimate...">
+       <button class="button" id="add-new-todo-button" type="submit" value="Add todo">
+      </form>
+
