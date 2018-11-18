@@ -2,7 +2,7 @@
  <ul> do list 
         <%@todos.each do |todo|%>
         <li> <input type="checkbox" name=""/>
-        <a href="show/<%= todo.id %>"><%= todo.description %></a>
+        <a href="todo/show/<%= todo.id %>"><%= todo.description %></a>
         <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
         </li>
         <%end%>
@@ -10,5 +10,5 @@
        <input class="text-input" id="new-todo-description" name="description" type="text" placeholder="Add a new todo...">
        <input class="text-input" id="new-pomodoro-estimate" name="pomodoro_estimate" type="number" placeholder="Pomodoro estimate...">
        <button class="button" id="add-new-todo-button" type="submit" value="Add todo">
-      </form>
-
+       </form>
+      
