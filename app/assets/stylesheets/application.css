@@ -21,9 +21,9 @@ html {font-family: sans-serif;}
  
   margin-top: 10px;
 
-    background-color:#0f30c1;
+    background-color:rgb(65, 135, 12);
     
-    border-radius: 100px;
+    border-radius: 300px;
 }
  #add-new-todo:active{
         box-shadow:1px 1px 1px #90A4AE;
